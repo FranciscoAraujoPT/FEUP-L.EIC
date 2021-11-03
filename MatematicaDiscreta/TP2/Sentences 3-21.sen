@@ -1,0 +1,13 @@
+7.2.4.28445macs:Mac OS X10.16SntFC1635869485931D1635871547161D1635871643523S1126012Small(a) | (Large(c) & Large(d))
+;a é pequeno ou tanto c como d são grandesBackOf(d, b) & BackOf(e, b)
+;d e e estão ambos atrás de b.BackOf(d, b) & BackOf(e, b) & Larger(d,  b) & Larger(e, b)
+;d e e estão ambos atrás de b e são maiores do que eleCube(d) & Cube(c) & ~Small(d) & ~Small(c)
+;Tanto d como c são cubos, além disso nenhum deles é pequeno.~(RightOf(e, c)  &  LeftOf(e, b))  & ~(RightOf(a, c)  &  LeftOf(a, b))
+;Nem e nem a estão à direita de c e à esquerda de b.~Large(e) | BackOf(e, a)
+;e não é grande ou está atrás de a.~Between(c, a, b) & ~FrontOf(c, a) & ~FrontOf(c, b)
+;c nem está entre a e b nem à frente de qualquer um deles.(Tet(a) & Tet(e)) | (Tet(a) & Tet(f))
+ ;a e e são ambos tetraedros ou são-no ambos a e f.~(FrontOf(d, c)  |  FrontOf(d, b))  & ~(FrontOf(c, c)  |  FrontOf(c, b))
+;Nem d nem c estão à frente de c ou b.Between(c, d, f) | (Smaller(c, d) & Smaller(c, f))
+;c está entre d e f ou é menor que ambos.~SameRow(b, c)
+;Não se verifica que b esteja na mesma linha que c.SameCol(b, e) & SameRow(e, d) & SameCol(d, a)
+;b está na mesma coluna que e, que está na mesma linha que d, que por sua vez está na mesma coluna que a.s=198807;
