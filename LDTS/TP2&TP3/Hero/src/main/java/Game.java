@@ -45,6 +45,7 @@ public class Game {
             try {
                 key = screen.readInput();
                 if(!arena.processKey(key)){
+                    System.out.println("YOU DIED!");
                     screen.stopScreen();
                     break;
                 }

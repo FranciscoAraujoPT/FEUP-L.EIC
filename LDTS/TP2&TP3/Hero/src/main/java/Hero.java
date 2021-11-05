@@ -1,38 +1,41 @@
 import com.googlecode.lanterna.SGR;
-import com.googlecode.lanterna.TerminalPosition;
-import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.graphics.TextGraphics;
 
-public class Hero {
-    private Position position;
+public class Hero extends Element{
 
-    public Hero(int cordX, int cordY){
-        position = new Position(cordX, cordY);
+    private int numberOfCoins = 0;
+
+    public Hero(int cordX, int cordY) {
+        super(cordX, cordY);
     }
 
-    public void draw(TextGraphics graphics){
-        graphics.setForegroundColor(TextColor.Factory.fromString("#FFFF33"));
+    @Override
+    public void draw(TextGraphics graphics, String color, String character){
+        super.draw(graphics, color, character);
         graphics.enableModifiers(SGR.BOLD);
-        graphics.putString(new TerminalPosition(position.getX(), position.getY()), "§");
     }
 
-    public Position moveUp(){
+    public Position moveUp(Position position){
         return new Position(position.getX(), position.getY() - 1);
     }
 
-    public Position moveDown(){
+    public Position moveDown(Position position){
         return new Position(position.getX(), position.getY() + 1);
     }
 
-    public Position moveLeft(){
+    public Position moveLeft(Position position){
         return new Position(position.getX() - 1, position.getY());
     }
 
-    public Position moveRight(){
+    public Position moveRight(Position position){
         return new Position(position.getX() + 1, position.getY());
     }
 
-    public void setPosition(Position position) {
-        this.position = position;
+    public int getNumberOfCoins() {
+        return numberOfCoins;
+    }
+
+    public void setNumberOfCoins(int numberOfCoins) {
+        this.numberOfCoins = numberOfCoins;
     }
 }
