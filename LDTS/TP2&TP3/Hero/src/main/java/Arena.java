@@ -151,11 +151,9 @@ public class Arena {
         if (canElementMove(position)) {
             hero.setPosition(position);
             verifyCoins(position);
-            if (verifyMonster(position)) {
-                return false;
-            }
+            return !verifyMonster(position);
         }
-//        moveMonsters();
+//      moveMonsters();
 
         return true;
     }
