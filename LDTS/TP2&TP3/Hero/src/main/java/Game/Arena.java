@@ -1,3 +1,6 @@
+package Game;
+
+import Game.Elements.*;
 import com.googlecode.lanterna.TerminalPosition;
 import com.googlecode.lanterna.TerminalSize;
 import com.googlecode.lanterna.TextColor;
@@ -12,7 +15,7 @@ import java.util.Random;
 public class Arena {
 
     public static final int MAX_COINS = 5;
-    public static final int MAX_MONSTERS = 5;
+    public static final int MAX_MONSTERS = 10;
     int width;
     int height;
 
@@ -73,14 +76,18 @@ public class Arena {
         return false;
     }
 
-    private void verifyCoins(Position position) {
+    private boolean verifyCoins(Position position) {
         for (Coin coin : coins) {
             if(coin.getPosition().equals(position)){
                 coins.remove(coin);
                 hero.setNumberOfCoins(hero.getNumberOfCoins()+1);
+                if(hero.getNumberOfCoins() == MAX_COINS){
+                    return true;
+                }
                 break;
             }
         }
+        return false;
     }
 
     private boolean verifyWall(Position position) {
@@ -95,10 +102,10 @@ public class Arena {
     private boolean verifyMonster(Position position) {
         for (Monster monster: monsters) {
             if(monster.getPosition().equals(position)){
-                return true;
+                return false;
             }
         }
-        return false;
+        return true;
     }
 
     private void createWalls() {
@@ -120,25 +127,25 @@ public class Arena {
             switch (random.nextInt(4)) {
                 case 0 -> {
                     aux = new Position(monster.getPosition().getX() + 1, monster.getPosition().getY());
-                    if (canElementMove(aux)) {
+                    if (canElementMove(aux) && verifyMonster(aux)) {
                         monster.setPosition(aux);
                     }
                 }
                 case 1 -> {
                     aux = new Position(monster.getPosition().getX() - 1, monster.getPosition().getY());
-                    if (canElementMove(aux)) {
+                    if (canElementMove(aux) && verifyMonster(aux)) {
                         monster.setPosition(aux);
                     }
                 }
                 case 2 -> {
                     aux = new Position(monster.getPosition().getX(), monster.getPosition().getY() + 1);
-                    if (canElementMove(aux)) {
+                    if (canElementMove(aux) && verifyMonster(aux)) {
                         monster.setPosition(aux);
                     }
                 }
                 case 3 -> {
                     aux = new Position(monster.getPosition().getX(), monster.getPosition().getY() - 1);
-                    if (canElementMove(aux)) {
+                    if (canElementMove(aux) && verifyMonster(aux)) {
                         monster.setPosition(aux);
                     }
                 }
@@ -150,8 +157,11 @@ public class Arena {
         moveMonsters();
         if (canElementMove(position)) {
             hero.setPosition(position);
-            verifyCoins(position);
-            return !verifyMonster(position);
+            if(verifyCoins(position)){
+                return false;
+            } else {
+                return verifyMonster(position);
+            }
         }
 //      moveMonsters();
 

@@ -1,3 +1,5 @@
+package Game;
+
 import com.googlecode.lanterna.TerminalSize;
 import com.googlecode.lanterna.gui2.*;
 import com.googlecode.lanterna.input.KeyStroke;
@@ -16,7 +18,7 @@ public class Game {
     Window window;
     Panel contentPanel;
 
-    public Game(){
+    public Game() {
         try {
             TerminalSize terminalSize = new TerminalSize(40, 20);
             DefaultTerminalFactory terminalFactory = new DefaultTerminalFactory()
@@ -31,6 +33,24 @@ public class Game {
         }
     }
 
+    private void drawRestart() {
+        contentPanel = new Panel(new GridLayout(3));
+        GridLayout gridLayout = (GridLayout)contentPanel.getLayoutManager();
+        gridLayout.setHorizontalSpacing(3);
+
+        Label title = new Label("Restart");
+        title.setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER,
+                GridLayout.Alignment.CENTER, true, true,
+                3, 1));
+        contentPanel.addComponent(title);
+
+        contentPanel.addComponent(new Button("Yes", this::run));
+        contentPanel.addComponent(
+                new EmptySpace()
+                        .setLayoutData(GridLayout.createHorizontallyFilledLayoutData(1)));
+        contentPanel.addComponent(new Button("No", this::close));
+    }
+
     public void drawMenu() {
         textGUI = new MultiWindowTextGUI(screen);
         window = new BasicWindow("Home");
@@ -39,7 +59,7 @@ public class Game {
         GridLayout gridLayout = (GridLayout)contentPanel.getLayoutManager();
         gridLayout.setHorizontalSpacing(3);
 
-        Label title = new Label("The Game");
+        Label title = new Label("The Game.Game");
         title.setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER,
                 GridLayout.Alignment.CENTER, true, true,
                 3, 1));
@@ -67,29 +87,26 @@ public class Game {
         }
     }
 
-    private void end() {
+    private void endWin() {
         textGUI = new MultiWindowTextGUI(screen);
-        window = new BasicWindow("YOU DIED!");
+        window = new BasicWindow("YOU WON!");
 
-        contentPanel = new Panel(new GridLayout(3));
-        GridLayout gridLayout = (GridLayout)contentPanel.getLayoutManager();
-        gridLayout.setHorizontalSpacing(3);
-
-        Label title = new Label("Restart");
-        title.setLayoutData(GridLayout.createLayoutData(GridLayout.Alignment.CENTER,
-                GridLayout.Alignment.CENTER, true, true,
-                3, 1));
-        contentPanel.addComponent(title);
-
-        contentPanel.addComponent(new Button("Yes", this::run));
-        contentPanel.addComponent(
-                new EmptySpace()
-                        .setLayoutData(GridLayout.createHorizontallyFilledLayoutData(1)));
-        contentPanel.addComponent(new Button("No", this::close));
+        drawRestart();
 
         window.setComponent(contentPanel);
         textGUI.addWindowAndWait(window);
     }
+
+    private void endLost() {
+        textGUI = new MultiWindowTextGUI(screen);
+        window = new BasicWindow("YOU DIED!");
+
+        drawRestart();
+
+        window.setComponent(contentPanel);
+        textGUI.addWindowAndWait(window);
+    }
+
     private void draw(){
         try {
             screen.clear();
@@ -110,7 +127,11 @@ public class Game {
             try {
                 key = screen.readInput();
                 if(!arena.processKey(key)){
-                    end();
+                    if(arena.hero.getNumberOfCoins() == 5){
+                        endWin();
+                    } else {
+                        endLost();
+                    }
                     break;
                 }
             } catch (IOException e) {

@@ -1,7 +1,10 @@
+package Game.Elements;
+
+import Game.Position;
 import com.googlecode.lanterna.SGR;
 import com.googlecode.lanterna.graphics.TextGraphics;
 
-public class Hero extends Element{
+public class Hero extends Element {
 
     private int numberOfCoins = 0;
 
