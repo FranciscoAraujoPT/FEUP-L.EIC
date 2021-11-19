@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Random;
 
 
-public class Arena {
+public class Arena extends Thread{
 
     public static final int MAX_COINS = 5;
     public static final int MAX_MONSTERS = 10;
@@ -120,41 +120,17 @@ public class Arena {
         }
     }
 
-    private void moveMonsters() {
-        Random random = new Random();
+    public void moveMonsters() {
         Position aux;
         for (Monster monster: monsters) {
-            switch (random.nextInt(4)) {
-                case 0 -> {
-                    aux = new Position(monster.getPosition().getX() + 1, monster.getPosition().getY());
-                    if (canElementMove(aux) && verifyMonster(aux)) {
-                        monster.setPosition(aux);
-                    }
-                }
-                case 1 -> {
-                    aux = new Position(monster.getPosition().getX() - 1, monster.getPosition().getY());
-                    if (canElementMove(aux) && verifyMonster(aux)) {
-                        monster.setPosition(aux);
-                    }
-                }
-                case 2 -> {
-                    aux = new Position(monster.getPosition().getX(), monster.getPosition().getY() + 1);
-                    if (canElementMove(aux) && verifyMonster(aux)) {
-                        monster.setPosition(aux);
-                    }
-                }
-                case 3 -> {
-                    aux = new Position(monster.getPosition().getX(), monster.getPosition().getY() - 1);
-                    if (canElementMove(aux) && verifyMonster(aux)) {
-                        monster.setPosition(aux);
-                    }
-                }
+            aux = monster.move(monster.getPosition());
+            if (canElementMove(aux) && verifyMonster(aux)) {
+                monster.setPosition(aux);
             }
         }
     }
 
     private boolean moveHero(Position position) {
-        moveMonsters();
         if (canElementMove(position)) {
             hero.setPosition(position);
             if(verifyCoins(position)){
@@ -163,7 +139,6 @@ public class Arena {
                 return verifyMonster(position);
             }
         }
-//      moveMonsters();
 
         return true;
     }

@@ -12,11 +12,34 @@ import java.io.IOException;
 
 public class Game {
 
+    boolean flag = false;
     Screen screen;
     Arena arena;
     WindowBasedTextGUI textGUI;
     Window window;
     Panel contentPanel;
+    Thread monstersThread, timeThread;
+
+    Thread heroThread = new Thread(() -> {
+        KeyStroke key;
+        while(true){
+            try {
+                key = screen.readInput();
+                System.out.println(key);
+                if(!arena.processKey(key)){
+                    if(arena.hero.getNumberOfCoins() == 5){
+                        endWin();
+                    } else {
+                        endLost();
+                    }
+                    break;
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+                break;
+            }
+        }
+    });
 
     public Game() {
         try {
@@ -26,14 +49,29 @@ public class Game {
             Terminal terminal = terminalFactory.createTerminal();
             screen = new TerminalScreen(terminal);
 
-            screen.startScreen();             // screens must be started
-            screen.doResizeIfNecessary();     // resize screen if necessary
+            screen.startScreen();
+            screen.doResizeIfNecessary();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
+    private void stopAllThreads(){
+        flag = false;
+        if(monstersThread != null) {
+            while (monstersThread.isAlive() || timeThread.isAlive());
+        }
+    }
+
+    private void startAllThreads() {
+        flag = true;
+        monstersThread.start();
+        timeThread.start();
+    }
+
     private void drawRestart() {
+        textGUI = new MultiWindowTextGUI(screen);
+
         contentPanel = new Panel(new GridLayout(3));
         GridLayout gridLayout = (GridLayout)contentPanel.getLayoutManager();
         gridLayout.setHorizontalSpacing(3);
@@ -44,11 +82,13 @@ public class Game {
                 3, 1));
         contentPanel.addComponent(title);
 
-        contentPanel.addComponent(new Button("Yes", this::run));
+        contentPanel.addComponent(new Button("Yes", this::runGame));
         contentPanel.addComponent(
                 new EmptySpace()
                         .setLayoutData(GridLayout.createHorizontallyFilledLayoutData(1)));
         contentPanel.addComponent(new Button("No", this::close));
+        window.setComponent(contentPanel);
+        textGUI.addWindowAndWait(window);
     }
 
     public void drawMenu() {
@@ -69,7 +109,7 @@ public class Game {
                 new EmptySpace()
                         .setLayoutData(GridLayout.createHorizontallyFilledLayoutData(1)));
 
-        contentPanel.addComponent(new Button("Start", this::run));
+        contentPanel.addComponent(new Button("Start", this::startGame));
 
         contentPanel.addComponent(
                 new EmptySpace()
@@ -88,23 +128,15 @@ public class Game {
     }
 
     private void endWin() {
-        textGUI = new MultiWindowTextGUI(screen);
+        stopAllThreads();
         window = new BasicWindow("YOU WON!");
-
         drawRestart();
-
-        window.setComponent(contentPanel);
-        textGUI.addWindowAndWait(window);
     }
 
     private void endLost() {
-        textGUI = new MultiWindowTextGUI(screen);
+        stopAllThreads();
         window = new BasicWindow("YOU DIED!");
-
         drawRestart();
-
-        window.setComponent(contentPanel);
-        textGUI.addWindowAndWait(window);
     }
 
     private void draw(){
@@ -117,27 +149,37 @@ public class Game {
         }
     }
 
-    public void run(){
-        KeyStroke key;
-        screen.setCursorPosition(null);   // we don't need a cursor
-        arena = new Arena(40, 20);
+    private void startGame() {
+        heroThread.start();
+        runGame();
+    }
 
-        while(true){
-            draw();
-            try {
-                key = screen.readInput();
-                if(!arena.processKey(key)){
-                    if(arena.hero.getNumberOfCoins() == 5){
-                        endWin();
-                    } else {
-                        endLost();
-                    }
-                    break;
+    private void runGame(){
+        arena = new Arena(40, 20);
+        stopAllThreads();
+
+        monstersThread = new Thread(() -> {
+            while(flag){
+                arena.moveMonsters();
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
-            } catch (IOException e) {
-                e.printStackTrace();
-                break;
             }
-        }
+        });
+
+        timeThread = new Thread(() -> {
+            while(flag) {
+                screen.setCursorPosition(null);
+                draw();
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        startAllThreads();
     }
 }

@@ -4,3 +4,6 @@
 out/
 build/
 *.iml
+a.out
+a.out.dSYM/
+.vscode

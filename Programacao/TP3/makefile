@@ -1,5 +1,5 @@
-CC=gcc
-CFLAGS=-Wall -fsanitize=address -fsanitize=undefined -fno-omit-frame-pointer -g
+CC=clang
+CFLAGS=-Wall -g -fsanitize=address -fsanitize=undefined -fno-omit-frame-pointer
 
 all: Ex2 Ex3 Ex4 Ex5 Ex6
 

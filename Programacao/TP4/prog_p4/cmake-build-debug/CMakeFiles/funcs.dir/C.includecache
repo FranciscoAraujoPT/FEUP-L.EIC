@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src/funcs.c
+funcs.h
+/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src/funcs.h
+
+/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src/funcs.h
+
