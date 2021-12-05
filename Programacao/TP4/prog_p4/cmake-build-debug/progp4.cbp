@@ -4,7 +4,7 @@
 	<Project>
 		<Option title="progp4"/>
 		<Option makefile_is_custom="1"/>
-		<Option compiler="gcc"/>
+		<Option compiler="clang"/>
 		<Option virtualFolders="CMake Files\;CMake Files\gtest\;CMake Files\gtest\googletest\;CMake Files\gtest\googletest\cmake\;CMake Files\cmake-build-debug\;"/>
 		<Build>
 			<Target title="all">
@@ -12,16 +12,6 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -47,21 +37,116 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_stack">
+				<Option output="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/test_stack" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src"/>
+					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest/include"/>
+					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest"/>
+					<Add directory="/opt/homebrew/opt/llvm/bin/../include/c++/v1"/>
+					<Add directory="/opt/homebrew/Cellar/llvm/13.0.0_1/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_stack"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_stack/fast">
+				<Option output="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/test_stack" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src"/>
+					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest/include"/>
+					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest"/>
+					<Add directory="/opt/homebrew/opt/llvm/bin/../include/c++/v1"/>
+					<Add directory="/opt/homebrew/Cellar/llvm/13.0.0_1/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_stack/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="stack">
+				<Option output="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/libstack.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src"/>
+					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest/include"/>
+					<Add directory="/opt/homebrew/opt/llvm/bin/../include/c++/v1"/>
+					<Add directory="/opt/homebrew/Cellar/llvm/13.0.0_1/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 stack"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="stack/fast">
+				<Option output="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/libstack.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src"/>
+					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest/include"/>
+					<Add directory="/opt/homebrew/opt/llvm/bin/../include/c++/v1"/>
+					<Add directory="/opt/homebrew/Cellar/llvm/13.0.0_1/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 stack/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="test_days_in_month">
 				<Option output="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/test_days_in_month" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="gcc"/>
+				<Option compiler="clang"/>
 				<Compiler>
 					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src"/>
 					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest/include"/>
 					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/opt/homebrew/opt/llvm/bin/../include/c++/v1"/>
+					<Add directory="/opt/homebrew/Cellar/llvm/13.0.0_1/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/System/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_days_in_month"/>
@@ -75,19 +160,106 @@
 				<Option working_dir="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="gcc"/>
+				<Option compiler="clang"/>
 				<Compiler>
 					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src"/>
 					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest/include"/>
 					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/opt/homebrew/opt/llvm/bin/../include/c++/v1"/>
+					<Add directory="/opt/homebrew/Cellar/llvm/13.0.0_1/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/System/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_days_in_month/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_hexstr_convert">
+				<Option output="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/test_hexstr_convert" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src"/>
+					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest/include"/>
+					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest"/>
+					<Add directory="/opt/homebrew/opt/llvm/bin/../include/c++/v1"/>
+					<Add directory="/opt/homebrew/Cellar/llvm/13.0.0_1/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_hexstr_convert"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_hexstr_convert/fast">
+				<Option output="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/test_hexstr_convert" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src"/>
+					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest/include"/>
+					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest"/>
+					<Add directory="/opt/homebrew/opt/llvm/bin/../include/c++/v1"/>
+					<Add directory="/opt/homebrew/Cellar/llvm/13.0.0_1/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_hexstr_convert/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_exp_taylor">
+				<Option output="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/test_exp_taylor" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src"/>
+					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest/include"/>
+					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest"/>
+					<Add directory="/opt/homebrew/opt/llvm/bin/../include/c++/v1"/>
+					<Add directory="/opt/homebrew/Cellar/llvm/13.0.0_1/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_exp_taylor"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_exp_taylor/fast">
+				<Option output="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/test_exp_taylor" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src"/>
+					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest/include"/>
+					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest"/>
+					<Add directory="/opt/homebrew/opt/llvm/bin/../include/c++/v1"/>
+					<Add directory="/opt/homebrew/Cellar/llvm/13.0.0_1/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_exp_taylor/fast"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -98,15 +270,14 @@
 				<Option working_dir="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
-				<Option compiler="gcc"/>
+				<Option compiler="clang"/>
 				<Compiler>
 					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src"/>
 					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/opt/homebrew/opt/llvm/bin/../include/c++/v1"/>
+					<Add directory="/opt/homebrew/Cellar/llvm/13.0.0_1/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/System/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 funcs"/>
@@ -120,15 +291,14 @@
 				<Option working_dir="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
-				<Option compiler="gcc"/>
+				<Option compiler="clang"/>
 				<Compiler>
 					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src"/>
 					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/opt/homebrew/opt/llvm/bin/../include/c++/v1"/>
+					<Add directory="/opt/homebrew/Cellar/llvm/13.0.0_1/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/System/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/Makefile&quot;  VERBOSE=1 funcs/fast"/>
@@ -142,16 +312,15 @@
 				<Option working_dir="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/gtest/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
-				<Option compiler="gcc"/>
+				<Option compiler="clang"/>
 				<Compiler>
 					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src"/>
 					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest/include"/>
 					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/opt/homebrew/opt/llvm/bin/../include/c++/v1"/>
+					<Add directory="/opt/homebrew/Cellar/llvm/13.0.0_1/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/System/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/gtest/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
@@ -165,16 +334,15 @@
 				<Option working_dir="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/gtest/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
-				<Option compiler="gcc"/>
+				<Option compiler="clang"/>
 				<Compiler>
 					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src"/>
 					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest/include"/>
 					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/opt/homebrew/opt/llvm/bin/../include/c++/v1"/>
+					<Add directory="/opt/homebrew/Cellar/llvm/13.0.0_1/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/System/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/gtest/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
@@ -188,16 +356,15 @@
 				<Option working_dir="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/gtest/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
-				<Option compiler="gcc"/>
+				<Option compiler="clang"/>
 				<Compiler>
 					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src"/>
 					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest/include"/>
 					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/opt/homebrew/opt/llvm/bin/../include/c++/v1"/>
+					<Add directory="/opt/homebrew/Cellar/llvm/13.0.0_1/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/System/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/gtest/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
@@ -211,16 +378,15 @@
 				<Option working_dir="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/gtest/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
-				<Option compiler="gcc"/>
+				<Option compiler="clang"/>
 				<Compiler>
 					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src"/>
 					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest/include"/>
 					<Add directory="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="/opt/homebrew/opt/llvm/bin/../include/c++/v1"/>
+					<Add directory="/opt/homebrew/Cellar/llvm/13.0.0_1/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/System/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/gtest/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
@@ -242,8 +408,23 @@
 		<Unit filename="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src/funcs.h">
 			<Option target="doxdocs"/>
 		</Unit>
+		<Unit filename="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src/stack.c">
+			<Option target="stack"/>
+		</Unit>
+		<Unit filename="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src/stack.h">
+			<Option target="stack"/>
+		</Unit>
 		<Unit filename="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src/test_days_in_month.cpp">
 			<Option target="test_days_in_month"/>
+		</Unit>
+		<Unit filename="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src/test_exp_taylor.cpp">
+			<Option target="test_exp_taylor"/>
+		</Unit>
+		<Unit filename="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src/test_hexstr_convert.cpp">
+			<Option target="test_hexstr_convert"/>
+		</Unit>
+		<Unit filename="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src/test_stack.cpp">
+			<Option target="test_stack"/>
 		</Unit>
 		<Unit filename="/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

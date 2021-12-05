@@ -29,6 +29,11 @@ enum {
   DECEMBER
 };
 
+//! Tells how many days a month has.
+//!
+//! \param int corresponding to the month
+//! \param int corresponding to the year
+//! \return Number of days of the month
 int days_in_month(int m, int y);
 
 double exp_taylor(double x, int n);

@@ -55,11 +55,23 @@ bool stack_pop(stack* s, int* v) {
 }
 
 bool stack_peek(const stack* s, int* v) {
-    // TODO
+    if(s == NULL || s->size <= 0) {
+        return false;
+    }
+
+    *v = s->top->value;
     return true;
 }
 
 void stack_to_array(const stack* s, int array[]) {
-  // TODO
+    if(s == NULL || s->size <= 0) {
+        return;
+    }
+
+    stacknode *aux = s->top;
+    for(int i = 0; aux != NULL; i++) {
+        array[i] = aux->value;
+        aux = aux->next;
+    }
 }
 

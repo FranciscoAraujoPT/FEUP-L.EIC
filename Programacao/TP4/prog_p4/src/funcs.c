@@ -1,4 +1,4 @@
-
+#include <math.h>
 #include "funcs.h"
 
 int hexstr_convert(const char h[]) {
@@ -49,8 +49,28 @@ int days_in_month(int m, int y) {
   return r;
 }
 
+long factorial(int n)
+{
+    int c;
+    long result = 1;
+
+    for (c = 1; c <= n; c++){
+        result = result * c;
+    }
+
+    return result;
+}
+
 double exp_taylor(double x, int n) {
-    // TODO
-    return -123.456;
+    if(n < 0){
+        return -1;
+    }
+
+    long double res = 1;
+    while(n > 0) {
+        res += (pow(x, n)/ factorial(n));
+        n--;
+    }
+    return res;
 }
 

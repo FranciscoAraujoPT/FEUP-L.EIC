@@ -19,13 +19,19 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${COMMON_FLAGS}")
 # Library for functions.
 include_directories(src)
 add_library(funcs src/funcs.c)
+add_library(stack src/stack.c)
 
 # Google Test support
 add_subdirectory(gtest)
 include_directories(gtest/googletest/include)
 
 # Test programs
-
+add_executable(test_stack src/test_stack.cpp)
+target_link_libraries(test_stack gtest gtest_main pthread stack)
+add_executable(test_exp_taylor src/test_exp_taylor.cpp)
+target_link_libraries(test_exp_taylor gtest gtest_main pthread funcs)
+add_executable(test_hexstr_convert src/test_hexstr_convert.cpp)
+target_link_libraries(test_hexstr_convert gtest gtest_main pthread funcs)
 add_executable(test_days_in_month src/test_days_in_month.cpp)
 target_link_libraries(test_days_in_month gtest gtest_main pthread funcs)
 

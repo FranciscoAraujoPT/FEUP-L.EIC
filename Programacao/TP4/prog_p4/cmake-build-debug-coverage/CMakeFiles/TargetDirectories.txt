@@ -1,0 +1,15 @@
+/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug-coverage/CMakeFiles/edit_cache.dir
+/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug-coverage/CMakeFiles/doxdocs.dir
+/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug-coverage/CMakeFiles/rebuild_cache.dir
+/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug-coverage/CMakeFiles/test_stack.dir
+/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug-coverage/CMakeFiles/stack.dir
+/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug-coverage/CMakeFiles/test_days_in_month.dir
+/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug-coverage/CMakeFiles/test_hexstr_convert.dir
+/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug-coverage/CMakeFiles/test_exp_taylor.dir
+/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug-coverage/CMakeFiles/funcs.dir
+/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug-coverage/gtest/CMakeFiles/rebuild_cache.dir
+/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug-coverage/gtest/CMakeFiles/edit_cache.dir
+/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug-coverage/gtest/googletest/CMakeFiles/rebuild_cache.dir
+/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug-coverage/gtest/googletest/CMakeFiles/edit_cache.dir
+/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug-coverage/gtest/googletest/CMakeFiles/gtest_main.dir
+/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug-coverage/gtest/googletest/CMakeFiles/gtest.dir

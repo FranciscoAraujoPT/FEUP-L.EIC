@@ -1,0 +1,4 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/opt/homebrew/opt/llvm/bin/clang -DCMAKE_CXX_COMPILER=/opt/homebrew/opt/llvm/bin/clang++ -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP5
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP5/cmake-build-debug

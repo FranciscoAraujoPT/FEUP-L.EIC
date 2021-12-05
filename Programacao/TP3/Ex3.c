@@ -33,6 +33,6 @@ int main(void)
         printf("Median: %f\n", count % 2 != 0 ? (float)v[count / 2] : (float)(v[count / 2] + v[count / 2 - 1]) / 2);
     }
 
-    free(v);
+    //free(v);
     return 0;
 }

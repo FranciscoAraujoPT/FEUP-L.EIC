@@ -1,7 +1,11 @@
-/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/CMakeFiles/edit_cache.dir
 /Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/CMakeFiles/doxdocs.dir
+/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/CMakeFiles/test_stack.dir
+/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/CMakeFiles/stack.dir
 /Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/CMakeFiles/test_days_in_month.dir
+/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/CMakeFiles/test_hexstr_convert.dir
+/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/CMakeFiles/test_exp_taylor.dir
 /Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/CMakeFiles/funcs.dir
 /Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/gtest/CMakeFiles/rebuild_cache.dir
 /Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/gtest/CMakeFiles/edit_cache.dir

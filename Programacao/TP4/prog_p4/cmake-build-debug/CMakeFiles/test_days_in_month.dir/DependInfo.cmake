@@ -10,7 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src/test_days_in_month.cpp" "/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/CMakeFiles/test_days_in_month.dir/src/test_days_in_month.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "Clang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

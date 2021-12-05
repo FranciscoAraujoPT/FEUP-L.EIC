@@ -1,0 +1,87 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-ASAN-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "ASAN",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "TP5",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "TP5::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TP5-ASAN-fcf6fd0cdcd6d2ba743f.json",
+					"name" : "TP5",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hello::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hello-ASAN-6a2a95da73a795afc8d3.json",
+					"name" : "hello",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "median::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-median-ASAN-93fe67d525d65396d6a2.json",
+					"name" : "median",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "minMaxSum::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-minMaxSum-ASAN-566cf710dcc1d2bc0360.json",
+					"name" : "minMaxSum",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP5/cmake-build-debug",
+		"source" : "/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP5"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

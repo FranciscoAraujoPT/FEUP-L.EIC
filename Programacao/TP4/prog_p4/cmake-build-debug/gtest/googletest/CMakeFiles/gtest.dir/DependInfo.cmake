@@ -10,7 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/gtest/googletest/src/gtest-all.cc" "/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/cmake-build-debug/gtest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "Clang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

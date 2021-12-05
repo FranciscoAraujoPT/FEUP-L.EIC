@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/TP4/prog_p4/src/stack.c
+stdio.h
+-
+stdbool.h
+-
+stdlib.h
+-
+
