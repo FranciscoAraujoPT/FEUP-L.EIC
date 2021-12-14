@@ -1,7 +1,10 @@
+import java.util.ArrayList;
+import java.util.List;
+
 abstract public class Bar {
-    BarObserver observers;
+    List<BarObserver> observers;
     public Bar() {
-        this.observers = observers;
+        this.observers = new ArrayList<>();
     }
     abstract public boolean isHappyHour();
     abstract public void startHappyHour();

@@ -1,0 +1,23 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -DCMAKE_C_COMPILER=/opt/homebrew/opt/llvm/bin/clang -DCMAKE_CXX_COMPILER=/opt/homebrew/opt/llvm/bin/clang++ -G Ninja /Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/Projeto1/progp1
+-- The C compiler identification is Clang 13.0.0
+-- The CXX compiler identification is Clang 13.0.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /opt/homebrew/opt/llvm/bin/clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /opt/homebrew/opt/llvm/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Python: /opt/homebrew/bin/python3.9 (found version "3.9.8") found components: Interpreter 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found Doxygen: /opt/homebrew/bin/doxygen (found version "1.9.2") found components: doxygen missing components: dot
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/franciscoaraujo/Desktop/FEUP-L.EIC/Programacao/Projeto1/progp1/cmake-build-debug
