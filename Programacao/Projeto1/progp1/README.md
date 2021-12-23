@@ -1,13 +1,12 @@
 
 # Trabalho de programação
 
-## Grupo
+## Grupo 201806326
 
-Identifique aqui o número mecanográfico e o nome completo de todos
-os membros do grupo.
+Francisco João Gonçalves Calado Araújo up201806326
 
 ## Tarefas realizadas
 
-Indique aqui as tarefas que conseguiu realizar e quais não. 
-
-
+Classe rgb::color (tarefa: documentar com anotações Doxygen e completar o código).
+Classe rgb::image (tarefa: documentar com anotações Doxygen e completar o código).
+Classe rgb::script (tarefa: documentar com anotações Doxygen e completar o código).
